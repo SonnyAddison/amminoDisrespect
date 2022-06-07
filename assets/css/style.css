@@ -20,7 +20,7 @@ header {
     font-size: xx-large;
     object-fit: fill;
     background-repeat: no-repeat;
-    padding: 90px;
+    padding: 50px;
     width: 100vw;      
 }
 
@@ -43,7 +43,5 @@ header nav ul li {
     color: var(--text); 
 }
 
-.main {
-    background-image: url(../images/Workout.jpg);
-}
+
 
