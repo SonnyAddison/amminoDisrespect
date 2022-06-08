@@ -11,7 +11,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;    
-    background-color: darkslategray;   
+       
 }
 
 header {
@@ -21,10 +21,10 @@ header {
     object-fit: fill;
     background-repeat: no-repeat;
     padding: 50px;
-    width: 100vw;      
+    width: 100vw;  
 }
 
-header nav  ul {
+header nav ul {
     list-style: none;
     color: var(--text);
 }
@@ -41,6 +41,11 @@ header nav ul li {
 .welcome {
     text-align: center;   
     color: var(--text); 
+}
+
+.cont {
+    width: 100vw;
+    height: 100vh;    
 }
 
 
