@@ -5,7 +5,9 @@
 }
 
 :root {
-    --text: rgb(13, 138, 65); 
+    --text: rgb(115, 5, 129); 
+    --button: rgb(115,130,118);
+
 }
 
 body {
@@ -40,8 +42,72 @@ header nav ul li {
 }
 
 .cont {
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex; 
     justify-content: center;
+}
+
+.center {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.startBtn {
+    border-radius: .5rem;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--button);
+    color: var(--text)
+}
+
+#startBtn:hover {
+    cursor: pointer;
+    box-shadow: 0rem 0.4rem 0.8rem 0rem violet;
+    transition: all 0.3s ease-in-out;
+    font-size: 2.95rem;
+}
+
+.hide {
+    display: none;
+}
+
+.listGroup {
+    padding: 0;
+    list-style: none;
+}
+
+.col-12 {
+    flex: 0 0 100%
+}
+
+.list-item {
+    margin-bottom: 10px;
+    padding: 1.5%;
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+@media screen and (min-width:768px) {
+    .col-md-8 {
+        flex: 0 0 calc(100% * 8 / 12 - 2%)
+    }
 }

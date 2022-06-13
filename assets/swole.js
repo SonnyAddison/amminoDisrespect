@@ -1,19 +1,50 @@
-var testButton = document.getElementById('testBtn')
+var startSearchEl = document.getElementById('startBtn');
+var startEl = document.getElementById('start');
+var workOutEl = document.getElementById('workout');
 
-var template = 'https://wger.de/api/v2/public-templates/?app_key=7ee914cf916f77eb82f1f2769585c24eb087b281&format=api'
 
-function getTemp () {
-    // The brow{ser fetches the resource from the remote server without first looking in the cache.
-    // The browser will then update the cache with the downloaded resource.
-    fetch(template, {
-        cache: 'reload',
+const apiKey = '7ee914cf916f77eb82f1f2769585c24eb087b281';
+
+
+function start () {
+
+  fetch('https://wger.de/api/v2/public-templates', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
   })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-    });
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
+  displaySelectTemplate ();
 }
 
-eventTarget.addEventListener('click', getTemp);
+function displaySelectTemplate (data) { 
+  var templateContainerEl = document.createElement('div');
+  var templateHeaderEl = document.createElement('h2');
+  var templateBox = document.createElement('div');
+
+  templateHeaderEl.textContent ='Select Workout';
+
+  templateContainerEl.classList = 'col-12 col-md-8';
+
+  templateBox.classList = 'list-item flex-row justify-space-between align-center';
+
+
+
+
+}
+
+  
+
+
+
+
+
+
+startSearchEl.addEventListener('click', start)
+
+
