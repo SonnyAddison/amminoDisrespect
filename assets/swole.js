@@ -8,7 +8,7 @@ const apiKey = '7ee914cf916f77eb82f1f2769585c24eb087b281';
 
 function start () {
 
-  fetch('https://wger.de/api/v2/public-templates', {
+  fetch('https://wger.de/api/v2/exercisecategory', {
     headers: {
       'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
     }
@@ -17,11 +17,9 @@ function start () {
     return resp.json();
   })
   .then(function (data) {
-    for (var i = 0; i < 16; i ++) {
-    console.log(data.results[i].name);
-    if (!data.results[i].name) {
-      return null;
-    } 
+    for (var i = 0; i < 7; i ++) {
+    console.log(data.results[i].name);   
+
     var workOutNames = data.results[i].name;
 
     var workOutNameEl = document.createElement('button');
@@ -39,34 +37,108 @@ function start () {
   }); 
 }
 
-function displayWorkOut () {
-  
+function displayAbs () {
+
+  fetch('https://wger.de/api/v2/exercise/?category=10&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  });
+}
+
+function displayArms () {
+
+  fetch('https://wger.de/api/v2/exercise/?category=8&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  });
+}
+
+function displayBack () {
+  fetch('https://wger.de/api/v2/exercise/?category=12&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  });
+}
+
+function displayCalves () {
+  fetch('https://wger.de/api/v2/exercise/?category=14&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  }); 
+}
+
+function displayChest () {
+  fetch('https://wger.de/api/v2/exercise/?category=11&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  }); 
+}
+
+function displayLegs () {
+  fetch('https://wger.de/api/v2/exercise/?category91&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  }); 
+}
+
+function displayShoulders () {
+  fetch('https://wger.de/api/v2/exercise/?category=13&language=2&limit=1&offset=1', {
+    headers: {
+      'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'
+    }
+  })
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) { 
+    console.log(data);
+  });
 }
 
 
-function displaySelectTemplate () { 
-  var templateContainerEl = document.createElement('div');
-  var templateHeaderEl = document.createElement('h2');
-  var templateBox = document.createElement('div');
   
-
-  templateHeaderEl.textContent ='Select Workout';
-
-  templateContainerEl.classList = 'col-12 col-md-8';
-
-  templateBox.classList = 'list-item flex-row justify-space-between align-center';
-
-
-
-
-}
-
-  
-
-
-
-
-
 
 startSearchEl.addEventListener('click', start)
 
