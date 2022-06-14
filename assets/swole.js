@@ -1,6 +1,7 @@
 var startSearchEl = document.getElementById('startBtn');
 var startEl = document.getElementById('start');
 var workOutEl = document.getElementById('workouts');
+var instructionEl = document.getElementById('instructions');
 
 
 const apiKey = '7ee914cf916f77eb82f1f2769585c24eb087b281';
@@ -22,8 +23,10 @@ function start () {
 
     var workOutNames = data.results[i].name;
 
-    var workOutNameEl = document.createElement('button');
+    var workOutNameEl = document.createElement('a');
     workOutNameEl.classList = 'listItem flexRow justifySpaceBetween alignCenter listBtn';
+
+    workOutEl.setAttribute('target', displayAbs)
 
     var titleEl = document.createElement('span');
     titleEl.textContent = workOutNames;

@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/rest.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='./assets/css/rest.css'>
+    <link rel='stylesheet' href='./assets/css/style.css'>
     <title>Ammino Disrespect</title>
 </head>
 
 <body>
-    <header class='headCont'>
+    <header>
         <div>
-            <h1 class="welcome">Welcome to Ammino Disrespect</h1>
+            <h1 class='welcome'>Welcome to Ammino Disrespect</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="nutrition.html">Feed the Beast</a></li>
-                    <li><a href="swole.html">Get Swole</a></li>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='nutrition.html'>Feed the Beast</a></li>
                 </ul>
+                
             </nav>
         </div>
     </header>
-
     <main>
         <div class='cont'>
-            <img src="./assets/images/Workout.jpg" alt="squat">
-        </div>    
+            <img src='./assets/images/Workout.jpg' alt='squat'>
+                <div class='center'><button id='startBtn' class='startBtn'>Lets Get Started</button></div>
+                <div id='workouts'class='center2'></div>
+                <div id="instructions" class='cont2 center3 hide'></div>
+        </div>          
     </main>
 
-    <script src="./assets/script.js"></script>
+    <script src='./assets/js/home.js'></script>
 </body>
 </html>
