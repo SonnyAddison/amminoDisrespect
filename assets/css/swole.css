@@ -55,13 +55,32 @@ header nav ul li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.center2 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .startBtn {
     border-radius: .5rem;
     font-size: 3rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--button);
-    color: var(--text)
+    color: var(--text);
+       
+}
+
+.fntCenter {
+    text-align: center;
+}
+
+.listBtn {
+    border-radius: .5rem;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 500px;
 }
 
 #startBtn:hover {
@@ -80,29 +99,31 @@ header nav ul li {
     list-style: none;
 }
 
-.col-12 {
-    flex: 0 0 100%
-}
-
-.list-item {
+.listItem {
     margin-bottom: 10px;
     padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--light-dark);
-    color: var(--primary);
-    text-decoration: none;
+    border-radius: .5rem;
+    background-color: var(--button);
+    color: var(--text);    
 }
 
-.flex-row {
+.listItem:hover {
+    cursor: pointer;
+    box-shadow: 0rem 0.4rem 0.8rem 0rem violet;
+    transition: all 0.3s ease-in-out;
+    font-size: 2.95rem;
+}
+
+.flexRow {
     display: flex;
     flex-wrap: wrap;
 }
 
-.justify-space-between {
+.justifySpaceBetween {
     justify-content: space-between;
 }
 
-.align-center {
+.alignCenter {
     align-items: center;
 }
 
