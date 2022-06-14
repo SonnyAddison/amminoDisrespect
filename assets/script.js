@@ -1,7 +1,32 @@
-// GET https://api.edamam.com/doc/open-api/nutrition-analysis-v1.json
+
 var fetchButton = document.getElementById('button');
-// var searchButton = document.getElementById('buttonTwo')
+
 var inputVal = document.getElementById('foodId')
+
+var spanone = document.getElementById('spanOne')
+var spantwo = document.getElementById('spanTwo')
+var spanthree = document.getElementById('spanThree')
+var spanfour = document.getElementById('spanFour')
+var spanfive = document.getElementById('spanFive')
+var spansix = document.getElementById('spanSix')
+var spanseven = document.getElementById('spanSeven')
+var spaneight = document.getElementById('spanEight')
+var spannine = document.getElementById('spanNine')
+var spanten = document.getElementById('spanTen')
+var spaneleven = document.getElementById('spanEleven')
+var spantwelve = document.getElementById('spanTwelve')
+var spanthirteen = document.getElementById('spanThirteen')
+var spanfourteen = document.getElementById('spanFourteen')
+var spanfifthteen = document.getElementById('spanFifthteen')
+var spansixthteen = document.getElementById('spanSixteen')
+var spanseventeen = document.getElementById('spanSeventeen')
+var spaneighteen = document.getElementById('spanEighteen')
+var spannineteen = document.getElementById('spanNineteen')
+var spantwenty = document.getElementById('spanTwenty')
+var spantwentyone = document.getElementById('spanTwentyone')
+var spantwentytwo = document.getElementById('spanTwentytwo')
+var spantwentythree = document.getElementById('spanTwentythree')
+var spantwentyfour = document.getElementById('spanTwentyfour')
 
 
 function getInputValue(){
