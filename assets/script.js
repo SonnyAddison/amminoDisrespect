@@ -18,7 +18,7 @@ var spantwelve = document.getElementById('spanTwelve')
 var spanthirteen = document.getElementById('spanThirteen')
 var spanfourteen = document.getElementById('spanFourteen')
 var spanfifthteen = document.getElementById('spanFifthteen')
-var spansixthteen = document.getElementById('spanSixteen')
+var spansixthteen = document.getElementById('spanSixthteen')
 var spanseventeen = document.getElementById('spanSeventeen')
 var spaneighteen = document.getElementById('spanEighteen')
 var spannineteen = document.getElementById('spanNineteen')
@@ -61,16 +61,17 @@ function getApi() {
         spantwelve.textContent = 'Magnesium ' + (data.totalDaily.MG.quantity);
         spanthirteen.textContent = 'Sodium ' + (data.totalDaily.NA.quantity);
         spanfourteen.textContent = 'Niacin ' + (data.totalDaily.NIA.quantity);
-        spanfifteen.textContent = 'Phosphorus ' + (data.totalDaily.P.quantity);
-        spansixteen.textContent = 'Protein ' + (data.totalDaily.PROCNT.quantity);
+        spanfifthteen.textContent = 'Phosphorus ' + (data.totalDaily.P.quantity);
+        spansixthteen.textContent = 'Protein ' + (data.totalDaily.PROCNT.quantity);
         spanseventeen.textContent = 'Riboflavin ' + (data.totalDaily.RIBF.quantity);
         spaneighteen.textContent = 'Thiamin ' + (data.totalDaily.THIA.quantity);
-        spannineteen.textContent = 'Vitamin A ' + (data.totalDaily.VITA_RAE);
+        spannineteen.textContent = 'Vitamin A ' + (data.totalDaily.VITA_RAE.quantity);
         spantwenty.textContent = 'Vitamin B6 ' + (data.totalDaily.VITB6A.quantity);
         spantwentyone.textContent = 'Vitamin B12 ' + (data.totalDaily.VITB12.quantity);
         spantwentytwo.textContent = 'Vitamin C ' + (data.totalDaily.VITC.quantity);
         spantwentythree.textContent = 'Vitamin D ' + (data.totalDaily.VITD.quantity);
         spantwentyfour.textContent = 'Zinc ' + (data.totalDaily.ZN.quantity);
+        localStorage.setObj(container.value);
     });
 }
 
