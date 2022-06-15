@@ -49,8 +49,8 @@ var getAbs = function () {
             var descriptions = data.results[i].description;
 
             var discriptionsEl = document.createElement('div');
-            discriptionsEl.setAttribute('href', '.swole.html');
             discriptionsEl.classList ='cont2 center 3';
+            discriptionsEl.setAttribute('href', '.swole.html');
                         
             var titleEl = document.createElement('h1')
             titleEl.textContent = workOutNames;
@@ -150,6 +150,6 @@ var getAbs = function () {
     });
   }*/
 
-startSearchEl.addEventListener('click', start);
-absEl.addEventListener('click', getAbs);
+startSearchEl.addEventListener('click', getAbs);
+
 
