@@ -1,7 +1,32 @@
-// GET https://api.edamam.com/doc/open-api/nutrition-analysis-v1.json
+
 var fetchButton = document.getElementById('button');
-// var searchButton = document.getElementById('buttonTwo')
+
 var inputVal = document.getElementById('foodId')
+
+var spanone = document.getElementById('spanOne')
+var spantwo = document.getElementById('spanTwo')
+var spanthree = document.getElementById('spanThree')
+var spanfour = document.getElementById('spanFour')
+var spanfive = document.getElementById('spanFive')
+var spansix = document.getElementById('spanSix')
+var spanseven = document.getElementById('spanSeven')
+var spaneight = document.getElementById('spanEight')
+var spannine = document.getElementById('spanNine')
+var spanten = document.getElementById('spanTen')
+var spaneleven = document.getElementById('spanEleven')
+var spantwelve = document.getElementById('spanTwelve')
+var spanthirteen = document.getElementById('spanThirteen')
+var spanfourteen = document.getElementById('spanFourteen')
+var spanfifthteen = document.getElementById('spanFifthteen')
+var spansixthteen = document.getElementById('spanSixthteen')
+var spanseventeen = document.getElementById('spanSeventeen')
+var spaneighteen = document.getElementById('spanEighteen')
+var spannineteen = document.getElementById('spanNineteen')
+var spantwenty = document.getElementById('spanTwenty')
+var spantwentyone = document.getElementById('spanTwentyone')
+var spantwentytwo = document.getElementById('spanTwentytwo')
+var spantwentythree = document.getElementById('spanTwentythree')
+var spantwentyfour = document.getElementById('spanTwentyfour')
 
 
 function getInputValue(){
@@ -36,16 +61,17 @@ function getApi() {
         spantwelve.textContent = 'Magnesium ' + (data.totalDaily.MG.quantity);
         spanthirteen.textContent = 'Sodium ' + (data.totalDaily.NA.quantity);
         spanfourteen.textContent = 'Niacin ' + (data.totalDaily.NIA.quantity);
-        spanfifteen.textContent = 'Phosphorus ' + (data.totalDaily.P.quantity);
-        spansixteen.textContent = 'Protein ' + (data.totalDaily.PROCNT.quantity);
+        spanfifthteen.textContent = 'Phosphorus ' + (data.totalDaily.P.quantity);
+        spansixthteen.textContent = 'Protein ' + (data.totalDaily.PROCNT.quantity);
         spanseventeen.textContent = 'Riboflavin ' + (data.totalDaily.RIBF.quantity);
         spaneighteen.textContent = 'Thiamin ' + (data.totalDaily.THIA.quantity);
-        spannineteen.textContent = 'Vitamin A ' + (data.totalDaily.VITA_RAE);
+        spannineteen.textContent = 'Vitamin A ' + (data.totalDaily.VITA_RAE.quantity);
         spantwenty.textContent = 'Vitamin B6 ' + (data.totalDaily.VITB6A.quantity);
         spantwentyone.textContent = 'Vitamin B12 ' + (data.totalDaily.VITB12.quantity);
         spantwentytwo.textContent = 'Vitamin C ' + (data.totalDaily.VITC.quantity);
         spantwentythree.textContent = 'Vitamin D ' + (data.totalDaily.VITD.quantity);
         spantwentyfour.textContent = 'Zinc ' + (data.totalDaily.ZN.quantity);
+        localStorage.setObj(container.value);
     });
 }
 
