@@ -1,8 +1,6 @@
 var startSearchEl = document.getElementById('startBtn');
 var startEl = document.getElementById('start');
 var bodyEl = document.getElementById('body');
-var instructionEl = document.getElementById('instructions');
-
 
 
 headers = {'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'}
@@ -20,27 +18,22 @@ var start = function () {
                 for (var i = 0; i < 7; i ++) {              
                 var bodyNames = data.results[i].name;
                 
-                var bodyNameEl = document.createElement('button');
-                bodyNameEl.setAttribute('id', bodyNames);
+                var bodyNameEl = document.createElement('a');
                 bodyNameEl.classList = 'listItem flexRow justifySpaceBetween alignCenter listBtn'; 
-                bodyNameEl.setAttribute('href', './swole.html?');                              
+                bodyNameEl.setAttribute('id', bodyNames);  
+                bodyNameEl.setAttribute('href', './swole.html');                           
                 
                 var titleEl = document.createElement('span');
                 titleEl.textContent = bodyNames;            
                 bodyNameEl.appendChild(titleEl);
-                bodyEl.appendChild(bodyNameEl);
-
-                var absEl = document.getElementById('Abs')
-            
-                absEl.addEventListener('click', getAbs)
-                
+                bodyEl.appendChild(bodyNameEl);                         
 
                 startSearchEl.classList.add('hide'); 
                 }   
             })
         })
 }
-
+/*
 var getAbs = function () {
   var apiUrl = 'https://wger.de/api/v2/exercise/?category=10&language=2&limit=1&offset=1';
 
@@ -56,6 +49,7 @@ var getAbs = function () {
 
             var discriptionsEl = document.createElement('div');
             discriptionsEl.classList ='cont2 center 3';
+            
                         
             var titleEl = document.createElement('h1')
             titleEl.textContent = workOutNames;
