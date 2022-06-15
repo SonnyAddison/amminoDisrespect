@@ -54,7 +54,7 @@ Landing page.
 
 
 Select body part
-![focused body parts](/assets/images/bodyPart.jpg)
+![focused body parts](/assets/images/landingPage.jpg)
 
 Exercise and descriptions
 ![Read through](/assets/images/excersise.jpg)
