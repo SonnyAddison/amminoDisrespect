@@ -27,15 +27,20 @@
     
     </header>
 
-    <div id="wholePage"> 
-        <section>
+    <main class="background">
         <h2>Enter a food item</h2>
-        <form action="/form/submit" method="post">
-            <textarea name="textarea" rows="5" cols="40"></textarea>
-        </form>
-    
-        <button id="button">Analyze</button>
-
+        <input type="text" placeholder="Enter food item" id="foodId">
+        <button id="button">Analyze</button> 
+    </main>
+    <section class="background">
+        <aside>
+            <h3>Saved meals</h2>
+            <div class="meal 1">1</div>
+            <div class="meal 2">2</div>
+            <div class="meal 3">3</div>
+            <div class="meal 4">4</div>
+            <div class="meal 5">5</div>
+        </aside>
         <div class="container">
             <div id="spanOne"></div>
             <div id="spanTwo"></div>
@@ -61,23 +66,13 @@
             <div id="spanTwentytwo"></div>
             <div id="spanTwentythree"></div>
             <div id="spanTwentyfour"></div>
-        </div>
+            </div>
     </section>
-        <aside>
-            <h3>Saved meals</h2>
-            <div class="meal 1">1</div>
-            <div class="meal 2">2</div>
-            <div class="meal 3">3</div>
-            <div class="meal 4">4</div>
-            <div class="meal 5">5</div>        
-        </aside>
-    </div>
 
     <footer>
         <div id="edamam-badge" data-color="white"></div>
     </footer>
 
-</body>
 <script src="./assets/script.js"></script>
-<div id="edamam-badge" data-color="white"></div>
+</body>
 </html>
