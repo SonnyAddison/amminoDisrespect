@@ -6,8 +6,27 @@ var prevEl = document.getElementById('prev');
 
 headers = {'Authorization': 'Token 7ee914cf916f77eb82f1f2769585c24eb087b281'}
 
-var getAbs = function () {
-  var apiUrl = 'https://wger.de/api/v2/exercise/?category=10&language=2&limit=1&offset=1';
+var getBodyName = function () {
+  var queryString = document.location.search;
+  var bodyName = queryString.split('=')[1];
+  console.log(bodyName)
+  var id = bodyName.split('&')[1]
+  var name = bodyName.split('&')[0]
+  console.log(name)
+  console.log(id)
+  
+
+  if (bodyName) {
+   nameEl.textContent = name;
+
+    getWorkout(id);
+  } else {
+    document.location.replace('./index.html');
+  }
+}
+
+var getWorkout = function (id) {
+  var apiUrl = 'https://wger.de/api/v2/exercise/?category=' + id + '&language=2&limit=1&offset=1';
 
   fetch(apiUrl,{headers}).then(function (resp) {
         console.log(resp);
@@ -25,4 +44,4 @@ var getAbs = function () {
         }) 
   })
 }  
-getAbs();
+getBodyName();
