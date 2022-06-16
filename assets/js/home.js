@@ -17,11 +17,12 @@ var start = function () {
             console.log(data)        
                 for (var i = 0; i < 7; i ++) {              
                 var bodyNames = data.results[i].name;
+                var id = data.results[i].id;
                 
                 var bodyNameEl = document.createElement('a');
                 bodyNameEl.classList = 'listItem flexRow justifySpaceBetween alignCenter listBtn'; 
                 bodyNameEl.setAttribute('id', bodyNames);  
-                bodyNameEl.setAttribute('href', './swole.html');                           
+                bodyNameEl.setAttribute('href', './swole.html?=' + bodyNames +'&'+ id);                           
                 
                 var titleEl = document.createElement('span');
                 titleEl.textContent = bodyNames;            
@@ -33,12 +34,13 @@ var start = function () {
             })
         })
 }
-/*
-var getAbs = function () {
+
+function getAbs (data) {
   var apiUrl = 'https://wger.de/api/v2/exercise/?category=10&language=2&limit=1&offset=1';
 
   fetch(apiUrl,{headers})
-    .then(function (resp) {
+}
+    /*.then(function (resp) {
         console.log(resp);
         return resp.json()
             .then(function (data) {
