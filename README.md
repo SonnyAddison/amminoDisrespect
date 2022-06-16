@@ -50,11 +50,11 @@ THEN the food item named is saved localy so that I can quickly select from prior
 
 Landing page.
 
-![Select Lets get started to begin or jump to nutional page](/assets/images/landingPage.JPG)
+![Select Lets get started to begin or jump to nutional page](/assets/images/landingPage.jpg)
 
 
 Select body part
-![focused body parts](/assets/images/landingPage.jpg)
+![focused body parts](/assets/images/bodyPart.jpg)
 
 Exercise and descriptions
 ![Read through](/assets/images/excersise.jpg)
