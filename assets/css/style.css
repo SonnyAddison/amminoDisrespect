@@ -43,8 +43,12 @@ header nav ul li {
 p {
     font-size: 25px;
     color: var(--text);
-    padding-top: 15%;
+    margin-top: 2%;
     
+}
+
+.pmove {
+    padding: 10%;
 }
 
 .cont {

@@ -36,8 +36,8 @@ var getWorkout = function (id) {
             var workOutNames = data.results[0].name;
             var descriptions = data.results[0].description; 
           
-            nameEl.textContent = workOutNames;
-            descripEl.textContent = descriptions;
+            nameEl.innerHTML = workOutNames;
+            descripEl.innerHTML = descriptions;
           
             
             
