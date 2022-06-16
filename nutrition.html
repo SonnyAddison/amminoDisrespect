@@ -26,15 +26,15 @@
     
     </header>
 
-    <div id="wholePage"> 
+    <div id="wholePage" class="background"> 
         <section>
-        <h2>Enter a food item</h2>
+        
         <form action="/form/submit" method="post">
+            <h2>Enter a food item</h2>
             <textarea name="textarea" rows="5" cols="40"></textarea>
+            <button id="button">Analyze</button>
         </form>
     
-        <button id="button">Analyze</button>
-
         <div class="container">
             <div id="spanOne"></div>
             <div id="spanTwo"></div>
@@ -75,8 +75,7 @@
     <footer>
         <div id="edamam-badge" data-color="white"></div>
     </footer>
-
-</body>
+    
 <script src="./assets/script.js"></script>
-<div id="edamam-badge" data-color="white"></div>
+</body>
 </html>

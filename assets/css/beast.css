@@ -5,7 +5,8 @@
 }
 
 :root {
-    --text: rgb(115, 5, 129); 
+    --text: rgb(115, 5, 129);
+    --button: rgb(115,130,118);
 }
 
 body {
@@ -43,7 +44,9 @@ header nav ul li {
     display: flex; 
     justify-content: center;
 }
-
+.background {
+    background-color: var(--button);
+}
 #WholePage {
     width: 100%;
     border: 1px dotted red;
@@ -51,9 +54,29 @@ header nav ul li {
   }
   section {
     display: inline-block;
-    width: 70%;
-    height: 300px;
+    width: 75%;
+    height: 400px;
     border: 1px dashed green;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    /* justify-content: center; */
+    margin: auto;
+  }
+  #button {
+    margin: auto;
+    border-radius: .4rem;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--button);
+    color: var(--text);
+  }
+  textarea{
+    margin: auto;
+    max-width: 30%;
   }
   aside {
     display: inline-block;
@@ -63,7 +86,7 @@ header nav ul li {
     float: left;
   }
 footer {
-    padding: 30px;
+    padding: 40px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
