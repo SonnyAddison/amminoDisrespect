@@ -28,10 +28,13 @@ var spantwentytwo = document.getElementById('spanTwentytwo')
 var spantwentythree = document.getElementById('spanTwentythree')
 var spantwentyfour = document.getElementById('spanTwentyfour')
 
+var itemsEl = document.getElementById('savedItems');
+var savedItemEl = document.getElementById('savedItemsCont')
+
 
 function getInputValue(){
      
-    var inputVal = document.getElementById("foodId").value;
+    var inputVal = document.getElementById("foodId").value.trim();
     
     alert(inputVal);
 }
@@ -74,11 +77,42 @@ function getApi() {
         localStorage.setObj(container.value);
     });
 }
+/*function createItemButton(itemName) {
+    var inputVal = document.getElementById("foodId").value.trim()
+    itemsEl.textContent = inputVal;
+    itemsEl.classList = 'btn city-button';
+    itemsEl.dataset.city = itemName;
+    cityButtonsContainerEL.appendChild(oldCityButtonEl);
+    oldCityButtonEl.addEventListener('click', function() {
+        var thisCity = this.getAttribute('data-city');
+        clearPage();
+        getCityData(thisCity);
+    })
+}
+
+function loadOldSearchButtons() {
+    removeChilds(cityButtonsContainerEL);
+    //if there are no todos in storage then make an empty array
+    if (localStorage.getItem('cities') === null) {
+        citiesArray = []; //an empty array
+    }
+    else {
+        //else if there are cities then get them from the json object
+        citiesArray = JSON.parse(localStorage.getItem('cities'));
+    }
+    // Arrow function, for each with a function with a parameter
+    citiesArray.forEach((city) => createCityButton(city));
+}
 
 // function apiLog() {
 //     span.textContent = data;
-// }
+// }*/
 
-fetchButton.addEventListener('click', getApi);
+fetchButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    var inputVal = document.getElementById("foodId").value.trim()
+    getApi()
+    localStorage.setItem('items', inputVal)
+});
 // searchButton.addEventListener('click', getInputValue);
 // apiLog()
